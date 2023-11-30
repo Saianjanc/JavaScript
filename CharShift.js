@@ -3,14 +3,18 @@ const readline = require('readline-sync');
 
 const str = readline.question("Enter a String: ");
 
-const str1 = str.split("")
+let str1 = str.split("")
 
-for (var i = 0;i<str1.length;i++) {
-    if (i+1==str1.length) {
-        str1[i]=str[0]
-    }
-    else{
-    str1[i]=str1[i+1]
+for (let i = 0;i<str1.length;i++) {
+    switch (str1[i]){
+        case ' ':
+            break
+        case 'z':
+            s[i] = 'a'
+        case 'Z':
+            s[i] = 'A'
+        default:
+            str1[i] = String.fromCharCode(str1[i].charCodeAt(0)+1);
     }
 }
 console.log(str1.join(""))
