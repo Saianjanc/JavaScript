@@ -8,8 +8,12 @@ for (let i = 0; i < len; i++) {
 }
 console.log("Before Swap "+array)
 for (let i=0;i<len;i+=2){
+    if (i+1==len) {
+        break
+    } else {
     let temp = array[i]
     array[i]=array[i+1]
     array[i+1]=temp
+    }
 }
 console.log("After Swap "+array)
